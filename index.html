@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker | Manage Your Finances</title>
+    <meta name="description" content="Easily track your expenses and manage your budget with our user-friendly Expense Tracker app.">
+
+    <!-- Linking CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Linking Font Awesome for icon support -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+
+<body>
+    <h1>My Budget Tracker</h1> <!-- Main title -->
+
+    <div class="getting-data"> <!-- Section for user input -->
+        <div class="content">
+            <label for="budget-amount">Your Budget &#58</label>
+            <input type="text" id="budget-amount" class="budget-amount" placeholder="30000"> <!-- Input for budget amount -->
+            <button class="budget-amount-btn">Add Budget</button> <!-- Button to add budget -->
+        </div>
+
+        <div class="content">
+            <label for="expense-type">Expense Details &#58</label>
+            <input type="text" id="expense-type" class="expense-type" placeholder="Rent"> <!-- Input for expense type -->
+        </div>
+
+        <div class="content">
+            <input type="text" id="expense-amount" class="expense-amount" placeholder="3000"> <!-- Input for expense amount -->
+            <button class="expense-amount-btn">Add Expense</button> <!-- Button to add expense -->
+        </div>
+    </div>
+
+    <div class="displaying-data"> <!-- Section to display budget and expenses -->
+        <div class="user-entered-data">
+            <i class="fa-solid fa-money-bill-wave"></i>
+            <div class="user-amount-details">
+                <p class="user-enter-budget">00</p> <!-- Display for entered budget -->
+                <p>Budget</p>
+            </div>
+        </div>
+        
+        <div class="user-entered-data">
+            <i class="fa-solid fa-wallet"></i>
+            <div class="user-amount-details">
+                <p class="user-enter-expense">00</p> <!-- Display for total expenses -->
+                <p>Expenses</p>
+            </div>
+        </div>
+        
+        <div class="user-entered-data">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <div class="user-amount-details">
+                <p class="user-remaining-budget">00</p> <!-- Display for remaining budget -->
+                <p>Balance</p>
+            </div>
+        </div>
+    </div>
+   
+    <div class="expense-track"> <!-- Section for listing all expenses -->
+        <h2>Expense Details</h2>
+        <div class="all-expense-details"></div> <!-- Area to display expense details -->
+    </div>
+      
+    <!-- Linking JavaScript file for functionality -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+
+/*import fonts from google font*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+}
+
+:root {
+    --background-color: #262626;
+    --primary-color: #ACBFA4;
+    --accent-color: #FF7F11;
+    --text-color: #E2E8CE;
+    --secondary-linear: #FF1B1C;
+    --subdiv-background-color: #3C3C3C;
+}
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #3C3C3C; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ACBFA4;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #FF7F11;
+}
+
+body{
+    font-family: "Roboto" , "Poppins" , sans-serif;
+    background-color: var(--background-color);
+    text-align: center;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+h1{
+  margin-top: 8%;
+  font-size: 3vmax;
+  letter-spacing: 1.3px;
+}
+.getting-data{
+    margin-top: 5%;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content{
+   font-size: 1.3vmax;
+margin-bottom: 2vmax;
+   letter-spacing: 0.8px; 
+}
+
+.content input{
+   padding: 0.5vmax 0.75vmax;
+   border-radius: 10px;
+   width: 15vmax;
+   letter-spacing: 0.75px;
+}
+
+.content button{
+   padding: 0.5vmax;
+   border-radius: 10px;
+   background-color: var(--primary-color);
+   cursor: pointer;
+    transition: .4s ease-in-out;
+}
+.content button:hover{
+   background-color: var(--accent-color);
+}
+.displaying-data{
+   margin-top: 3%;
+   display: flex;
+   height: 12vmax;
+   width: 100%;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-wrap: wrap;
+}
+.user-entered-data{
+   background-color: var(--subdiv-background-color);
+   width: 20%;
+   border-radius: 20px;
+   height: 70%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+    font-size: 1.6vmax;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1vmax;
+}
+.user-entered-data i{
+     transition: .3s ease-in-out;
+    font-size: 3vmax;
+}
+.user-entered-data i:hover{
+    color: var(--accent-color);
+}
+.user-amount-details :nth-last-child(1){
+    font-weight: 300;
+    margin-top: 3px;
+    font-size:1vmax;
+}
+
+.expense-track{
+    width: 85%;
+    border-radius: 10px;
+    background-color: var(--subdiv-background-color);
+    min-height: 300px;
+    height: auto;
+    margin: 4% auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    overflow-y:scroll;
+    padding: 2.3% 2.5%;
+}
+h2{
+    font-size: 2.2vmax;
+    letter-spacing: 1.5px;
+    margin-bottom: 3%;
+}
+.each-expense-details{
+    width: 95%;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    align-items: center;
+    color: var(--background-color);
+    margin-bottom: 1vmax; 
+}
+.ex-det-btns button{
+    font-size: 1.1vmax;
+    padding: 0.5vmax 0.75vmax;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--secondary-linear);
+}
+.ex-det-btns .edit{
+    background-color: var(--accent-color);
+}
+
+@media(max-width: 780px){
+    .displaying-data{
+        height: 40vmax;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .content{
+    width: 100%; 
+    }
+    .user-entered-data{
+        font-size: 3vmax;
+        width: 80%;
+    }
+    .user-entered-data i{
+        font-size: 3.5vmax;
+    }
+    .getting-data{
+        margin-top: 12%;
+    }
+    .content {
+        font-size: 2vmax;    
+    }
+    .user-amount-details :nth-last-child(1){
+        font-size: 1.7vmax;
+    }
+    h2{
+        font-size: 2.5vmax;
+        margin-bottom: 2.7vmax;
+    }
+    .each-expense-details{
+        font-size: 2.2vmax;
+        padding: 1% 5%;
+        width: 100%;
+    }
+    .each-expense-details button{
+        font-size: 1.8vmax;
+    }               
+}
+@media (min-width: 780px) and (max-width: 1080px) {
+    .displaying-data{
+        height: 40vmax;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    h1{
+        font-size: 3.5vmax;
+    }
+    .content{
+    width: 100%; 
+    }
+    .content input{
+        font-size: 1.5vmax;
+    }
+    .content button{
+        font-size: 1.5vmax;
+    }
+    .user-entered-data{
+        font-size: 3vmax;
+        width: 80%;
+    }
+    .user-entered-data i{
+        font-size: 3.5vmax;
+    }
+    .getting-data{
+        margin-top: 12%;
+    }
+    .content {
+        font-size: 2vmax;    
+    }
+    .user-amount-details :nth-last-child(1){
+        font-size: 1.7vmax;
+    }
+    h2{
+        font-size: 2.5vmax;
+        margin-bottom: 2.7vmax;
+    }
+    .each-expense-details{
+        font-size: 2.2vmax;
+        padding: 1% 5%;
+        width: 100%;
+    }
+    .each-expense-details button{
+        font-size: 1.8vmax;
+    }
+}
